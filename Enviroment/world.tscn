@@ -1,0 +1,127 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Camera.gd" type="Script" id=1]
+[ext_resource path="res://Enviroment/Hall n Floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://default_env.tres" type="Environment" id=4]
+
+[sub_resource type="SpatialMaterial" id=2]
+params_diffuse_mode = 1
+emission_enabled = true
+emission = Color( 1, 1, 1, 1 )
+emission_energy = 3.07
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CubeMesh" id=3]
+material = SubResource( 2 )
+size = Vector3( 9, 0.2, 2.5 )
+
+[sub_resource type="GIProbeData" id=4]
+bounds = AABB( -10.0407, -3.12999, -14.1859, 20.0815, 6.25998, 28.3717 )
+cell_size = 0.221654
+to_cell_xform = Transform( 4.51153, 0, 0, 0, 4.51153, 0, 0, 0, 4.51153, 45.2991, 14.1211, 64 )
+dynamic_data = PoolIntArray( 0, 8, 128, 32, 128, 1, 0, 1065353216, 1065353216, 0, 0, 1065353216, -1082130432, 0, 0, 1065353216, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
+dynamic_range = 4
+energy = 2.14
+bias = 1.5
+normal_bias = 0.0
+propagation = 0.7
+compress = true
+
+[node name="world" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 4 )
+
+[node name="Hall n Floor" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.524205, 0 )
+
+[node name="LIGTHS" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.96936, 0 )
+visible = false
+
+[node name="SpotLight" type="SpotLight" parent="LIGTHS"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39016, -9.60934e-08, 2.19836 )
+visible = false
+light_energy = 4.41
+spot_range = 8.64777
+spot_angle = 81.9526
+
+[node name="SpotLight3" type="SpotLight" parent="LIGTHS"]
+transform = Transform( 0.505941, -0.0353966, 0.861842, 0.0697913, 0.997562, 2.24251e-08, -0.85974, 0.0601491, 0.507177, 2.14483, 8.82547, 1.35321 )
+visible = false
+light_energy = 16.0
+spot_range = 10.5583
+spot_angle = 78.297
+
+[node name="SpotLight4" type="SpotLight" parent="LIGTHS"]
+transform = Transform( 0.911948, 1.7935e-08, -0.410305, -1.7935e-08, 1, 3.84886e-09, 0.410305, 3.84886e-09, 0.911948, 0, 7.2542, 3.02594 )
+visible = false
+light_energy = 13.0
+spot_range = 18.7303
+spot_angle = 49.0079
+
+[node name="SpotLight5" type="SpotLight" parent="LIGTHS"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.34108, 1.68952 )
+visible = false
+light_energy = 13.0
+spot_range = 11.2405
+spot_angle = 80.1563
+
+[node name="SpotLight7" type="SpotLight" parent="LIGTHS"]
+transform = Transform( 0.885588, -2.03027e-08, 0.464471, 2.03027e-08, 1, 5.00109e-09, -0.464471, 5.00109e-09, 0.885588, -4.96495, -0.369506, 2.95035 )
+light_energy = 5.3
+spot_range = 7.90602
+spot_angle = 64.6875
+
+[node name="SpotLight8" type="SpotLight" parent="LIGTHS"]
+transform = Transform( 0.546584, -3.66041e-08, 0.837404, 3.66041e-08, 1, 1.98194e-08, -0.837404, 1.98194e-08, 0.546584, 0.819693, -11.5966, 1.05515 )
+light_energy = 13.0
+spot_range = 7.90602
+spot_angle = 84.8607
+
+[node name="SpotLight2" type="SpotLight" parent="LIGTHS"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.72628, -2.38419e-07 )
+light_energy = 4.41
+spot_range = 5.93833
+spot_angle = 49.2944
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="LIGTHS"]
+transform = Transform( -0.357912, 0.765243, -0.535073, -0.506672, 0.322176, 0.799679, 0.784336, 0.557321, 0.272417, 0, -1.74066, 1.95495 )
+light_energy = 0.7
+
+[node name="DirectionalLight" type="DirectionalLight" parent="LIGTHS"]
+transform = Transform( -0.357912, 0.765243, -0.535073, -0.110139, -0.603631, -0.78962, -0.927237, -0.223682, 0.30033, 0, 2.81516, 1.95495 )
+light_energy = 0.7
+
+[node name="OmniLight" type="OmniLight" parent="LIGTHS"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.11495, -4.76837e-07 )
+light_energy = 6.19
+omni_range = 6.69058
+
+[node name="OmniLight2" type="OmniLight" parent="LIGTHS"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.50451, 4.76837e-07 )
+light_energy = 6.19
+omni_range = 7.3076
+
+[node name="Difised Lights" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91192, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Difised Lights"]
+transform = Transform( 1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 2.75334, 0 )
+visible = false
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91192, 0 )
+script = ExtResource( 1 )
+mouse_sens = 0.1
+
+[node name="GIProbe" type="GIProbe" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.15264, 0 )
+visible = false
+extents = Vector3( 10.0407, 3.12999, 14.1859 )
+energy = 2.14
+compress = true
+data = SubResource( 4 )

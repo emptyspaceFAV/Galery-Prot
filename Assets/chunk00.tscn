@@ -1,0 +1,72 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Raw Assets/chunk00.glb" type="PackedScene" id=1]
+[ext_resource path="res://Raw Assets/Textures/female_head_specular.jpg" type="Texture" id=2]
+[ext_resource path="res://Raw Assets/Textures/fractal_1.jpg" type="Texture" id=3]
+[ext_resource path="res://Raw Assets/Textures/lion.jpg" type="Texture" id=4]
+[ext_resource path="res://Raw Assets/Textures/david_bike_hall_3.jpg" type="Texture" id=5]
+[ext_resource path="res://Raw Assets/Textures/female_helmet.jpg" type="Texture" id=6]
+[ext_resource path="res://Raw Assets/Textures/old_man.jpg" type="Texture" id=7]
+[ext_resource path="res://Raw Assets/Textures/nefertiti.jpg" type="Texture" id=8]
+[ext_resource path="res://Raw Assets/Textures/monk_uv.jpg" type="Texture" id=11]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 5 )
+
+[sub_resource type="SpatialMaterial" id=5]
+params_diffuse_mode = 1
+albedo_color = Color( 0.717647, 0.717647, 0.717647, 1 )
+metallic_specular = 0.48
+roughness = 0.81
+normal_enabled = true
+normal_scale = 0.41
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 6 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 11 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_texture = ExtResource( 7 )
+
+[node name="chunk00" instance=ExtResource( 1 )]
+
+[node name="fractal_1_Cube001" parent="." index="0"]
+material/0 = SubResource( 1 )
+
+[node name="lion" parent="." index="1"]
+material/0 = SubResource( 2 )
+
+[node name="female_head" parent="." index="2"]
+material/0 = SubResource( 3 )
+
+[node name="david_bike_hall_3" parent="." index="3"]
+material/0 = SubResource( 4 )
+
+[node name="podiums" parent="." index="4"]
+material/0 = SubResource( 5 )
+
+[node name="female_helmet_female_helmet_decimated" parent="." index="5"]
+material/0 = SubResource( 6 )
+
+[node name="monk_decimated_3_percent" parent="." index="6"]
+material/0 = SubResource( 7 )
+
+[node name="nefertiti" parent="." index="7"]
+material/0 = SubResource( 8 )
+
+[node name="old_man_decimated_meshlab" parent="." index="8"]
+material/0 = SubResource( 9 )
