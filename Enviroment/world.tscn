@@ -4,7 +4,7 @@
 [ext_resource path="res://Enviroment/Hall n Floor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://default_env.tres" type="Environment" id=4]
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=1]
 params_diffuse_mode = 1
 emission_enabled = true
 emission = Color( 1, 1, 1, 1 )
@@ -12,21 +12,11 @@ emission_energy = 3.07
 emission_operator = 0
 emission_on_uv2 = false
 
-[sub_resource type="CubeMesh" id=3]
-material = SubResource( 2 )
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
 size = Vector3( 9, 0.2, 2.5 )
 
-[sub_resource type="GIProbeData" id=4]
-bounds = AABB( -10.0407, -3.12999, -14.1859, 20.0815, 6.25998, 28.3717 )
-cell_size = 0.221654
-to_cell_xform = Transform( 4.51153, 0, 0, 0, 4.51153, 0, 0, 0, 4.51153, 45.2991, 14.1211, 64 )
-dynamic_data = PoolIntArray( 0, 8, 128, 32, 128, 1, 0, 1065353216, 1065353216, 0, 0, 1065353216, -1082130432, 0, 0, 1065353216, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
-dynamic_range = 4
-energy = 2.14
-bias = 1.5
-normal_bias = 0.0
-propagation = 0.7
-compress = true
+[sub_resource type="GIProbeData" id=3]
 
 [node name="world" type="Spatial"]
 
@@ -38,7 +28,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.524205, 0 )
 
 [node name="LIGTHS" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.96936, 0 )
-visible = false
 
 [node name="SpotLight" type="SpotLight" parent="LIGTHS"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39016, -9.60934e-08, 2.19836 )
@@ -76,7 +65,8 @@ spot_angle = 64.6875
 
 [node name="SpotLight8" type="SpotLight" parent="LIGTHS"]
 transform = Transform( 0.546584, -3.66041e-08, 0.837404, 3.66041e-08, 1, 1.98194e-08, -0.837404, 1.98194e-08, 0.546584, 0.819693, -11.5966, 1.05515 )
-light_energy = 13.0
+visible = false
+light_energy = 6.98
 spot_range = 7.90602
 spot_angle = 84.8607
 
@@ -96,7 +86,7 @@ light_energy = 0.7
 
 [node name="OmniLight" type="OmniLight" parent="LIGTHS"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.11495, -4.76837e-07 )
-light_energy = 6.19
+light_energy = 3.78
 omni_range = 6.69058
 
 [node name="OmniLight2" type="OmniLight" parent="LIGTHS"]
@@ -110,7 +100,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91192, 0 )
 [node name="MeshInstance" type="MeshInstance" parent="Difised Lights"]
 transform = Transform( 1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 2.75334, 0 )
 visible = false
-mesh = SubResource( 3 )
+mesh = SubResource( 2 )
 material/0 = null
 
 [node name="Camera" type="Camera" parent="."]
@@ -124,4 +114,4 @@ visible = false
 extents = Vector3( 10.0407, 3.12999, 14.1859 )
 energy = 2.14
 compress = true
-data = SubResource( 4 )
+data = SubResource( 3 )
