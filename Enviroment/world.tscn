@@ -107,7 +107,6 @@ visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Difised Lights"]
 transform = Transform( 1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 2.75334, 0 )
-visible = false
 mesh = SubResource( 2 )
 material/0 = null
 
