@@ -36,6 +36,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.524205, 0 )
 
 [node name="LIGTHS" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.96936, 0 )
+visible = false
 
 [node name="SpotLight" type="SpotLight" parent="LIGTHS"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39016, -9.60934e-08, 2.19836 )
