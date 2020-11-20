@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Prefabs/SimpleFPSCamera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enviroment/recibidor01.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enviroment/Hall n Floor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://default_env.tres" type="Environment" id=4]
@@ -121,9 +120,6 @@ visible = false
 transform = Transform( 1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 2.75334, 0 )
 mesh = SubResource( 2 )
 material/0 = null
-
-[node name="Camera" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.32895, -4.79301 )
 
 [node name="GIProbe" type="GIProbe" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.386676, -1.02402 )
