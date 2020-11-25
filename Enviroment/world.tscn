@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Enviroment/recibidor01.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enviroment/Hall n Floor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://default_env.tres" type="Environment" id=4]
 [ext_resource path="res://Prefabs/CharcterController.tscn" type="PackedScene" id=5]
 
@@ -21,34 +20,34 @@ size = Vector3( 9, 0.2, 2.5 )
 bounds = AABB( -13.2186, -4.2018, -13.5921, 26.4372, 8.4036, 27.1842 )
 cell_size = 0.212377
 to_cell_xform = Transform( 4.70862, 0, 0, 0, 4.70862, 0, 0, 0, 4.70862, 62.2413, 19.7847, 64 )
-dynamic_data = PoolIntArray( 0, 8, 128, 64, 128, 1, 0, 112, 101, 110, 118, 114, 95, 110, 97, 116, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
+dynamic_data = PoolIntArray( 0, 8, 128, 64, 128, 1, 0, 3, 5, 3, 7, 5, 8, 10, 12, 10, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
 dynamic_range = 4
 bias = 1.5
 normal_bias = 0.0
 propagation = 0.7
 
 [sub_resource type="BoxShape" id=4]
-extents = Vector3( 10, 1, 10 )
+extents = Vector3( 12.5297, 1, 15.882 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 2.7181, 0.488995, 1.92311 )
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 1.8096, 0.394062, 1.80598 )
 
 [node name="world" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 4 )
 
-[node name="Hall n Floor" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.524205, 0 )
-visible = false
-
 [node name="LIGTHS" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.96936, 0 )
-visible = false
 
 [node name="SpotLight" type="SpotLight" parent="LIGTHS"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39016, -9.60934e-08, 2.19836 )
-visible = false
-light_energy = 4.41
+transform = Transform( 1, 0, 0, 0, 0.935432, -0.353508, 0, 0.353508, 0.935432, 6.11621, 5.20617, -2.64099 )
+light_energy = 2.06
 spot_range = 8.64777
-spot_angle = 81.9526
+spot_angle = 64.5665
 
 [node name="SpotLight3" type="SpotLight" parent="LIGTHS"]
 transform = Transform( 0.505941, -0.0353966, 0.861842, 0.0697913, 0.997562, 2.24251e-08, -0.85974, 0.0601491, 0.507177, 2.14483, 8.82547, 1.35321 )
@@ -93,11 +92,12 @@ spot_range = 5.93833
 spot_angle = 49.2944
 
 [node name="DirectionalLight2" type="DirectionalLight" parent="LIGTHS"]
-transform = Transform( -0.357912, 0.765243, -0.535073, -0.506672, 0.322176, 0.799679, 0.784336, 0.557321, 0.272417, 0, -1.74066, 1.95495 )
+transform = Transform( -0.357912, 0.765243, -0.535073, -0.813972, 0.0250971, 0.580362, 0.457546, 0.643253, 0.613903, 0, -1.74066, 1.95495 )
 light_energy = 0.7
 
 [node name="DirectionalLight" type="DirectionalLight" parent="LIGTHS"]
-transform = Transform( -0.357912, 0.765243, -0.535073, -0.110139, -0.603631, -0.78962, -0.927237, -0.223682, 0.30033, 0, 2.81516, 1.95495 )
+transform = Transform( -0.357912, 0.765243, -0.535073, -0.896788, -0.441349, -0.0313373, -0.260134, 0.468631, 0.844225, 0, 2.81516, 1.95495 )
+visible = false
 light_energy = 0.7
 
 [node name="OmniLight" type="OmniLight" parent="LIGTHS"]
@@ -141,5 +141,33 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1257, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="Collisions/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.78923, 0 )
 shape = SubResource( 4 )
+
+[node name="StaticBody2" type="StaticBody" parent="Collisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0354, -6.62626, 1.75296 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Collisions/StaticBody2"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 9.00254, 4.32583, 0 )
+shape = SubResource( 5 )
+
+[node name="StaticBody3" type="StaticBody" parent="Collisions"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0337, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Collisions/StaticBody3"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -4.83029, -1.07827, 1.74871 )
+shape = SubResource( 5 )
+
+[node name="StaticBody4" type="StaticBody" parent="Collisions"]
+transform = Transform( -5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -0.0987954, -6.28713, -16.168 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Collisions/StaticBody4"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 8.09217, 4.32583, 2.98023e-08 )
+shape = SubResource( 6 )
+
+[node name="StaticBody5" type="StaticBody" parent="Collisions"]
+transform = Transform( -5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 0.187397, 0.213782, 13.7874 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Collisions/StaticBody5"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -1.72882, -2.41481, -0.0755214 )
+shape = SubResource( 6 )
 
 [editable path="CharcterController"]

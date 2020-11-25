@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/AMPHITRITE_Base_Color.png-17960bd75416390dcbbd81d4351bbebf.s3tc.stex"
+path.etc="res://.import/AMPHITRITE_Base_Color.png-17960bd75416390dcbbd81d4351bbebf.etc.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Raw Assets/Esculturas/Textures/AMPHITRITE_Base_Color.png"
+dest_files=[ "res://.import/AMPHITRITE_Base_Color.png-17960bd75416390dcbbd81d4351bbebf.s3tc.stex", "res://.import/AMPHITRITE_Base_Color.png-17960bd75416390dcbbd81d4351bbebf.etc.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=true
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=1
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
