@@ -20,6 +20,7 @@ func _process(delta):
 	var move_vec = Vector3.ZERO
 	if Input.is_action_pressed("ui_up"):
 		move_vec += Vector3.FORWARD
+		
 		pass
 	elif Input.is_action_pressed("ui_down"):
 		move_vec += Vector3.BACK

@@ -128,15 +128,18 @@ extents = Vector3( 13.2186, 4.2018, 13.5921 )
 data = SubResource( 3 )
 
 [node name="recibidor01" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.457929, -0.0218053, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0490722, 1.43542, 1.87659 )
 
 [node name="CharcterController" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52601, -3.1993, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52601, -1.67432, 0 )
 
 [node name="Collisions" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1257, 0 )
 
 [node name="StaticBody" type="StaticBody" parent="Collisions"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Collisions/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.78923, 0 )
 shape = SubResource( 4 )
+
+[editable path="CharcterController"]

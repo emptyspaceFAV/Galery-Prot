@@ -45,6 +45,7 @@ func _physics_process(delta):
 	#velocity = body_to_move.move_and_slide_with_snap(velocity,snap_vec,Vector3.UP,true) # como lo tienen en los cursos y tutoriales
 	body_to_move.move_and_slide_with_snap(velocity,snap_vec,Vector3.UP,true) # mi solucion temporal HACKY
 	
+	
 	var grounded = body_to_move.is_on_floor()
 	
 	if grounded:
