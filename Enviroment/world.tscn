@@ -92,8 +92,9 @@ spot_range = 5.93833
 spot_angle = 49.2944
 
 [node name="DirectionalLight2" type="DirectionalLight" parent="LIGTHS"]
-transform = Transform( -0.357912, 0.765243, -0.535073, -0.813972, 0.0250971, 0.580362, 0.457546, 0.643253, 0.613903, 0, -1.74066, 1.95495 )
-light_energy = 0.7
+transform = Transform( 0.30693, 0.937785, 0.162335, -0.876972, 0.212409, 0.431048, 0.369749, -0.274665, 0.887606, 0, -1.74066, -2.69944 )
+light_energy = 0.28
+shadow_enabled = true
 
 [node name="DirectionalLight" type="DirectionalLight" parent="LIGTHS"]
 transform = Transform( -0.357912, 0.765243, -0.535073, -0.896788, -0.441349, -0.0313373, -0.260134, 0.468631, 0.844225, 0, 2.81516, 1.95495 )
